@@ -5,10 +5,10 @@ import cookieParser from "cookie-parser"
 
 const app = express()
 
-const corsOrigin = process.env.CORS_ORIGIN.split(',')
+const env = process.env
 
 app.use(cors({
-    origin: [...corsOrigin],
+    origin: [env.CORS_ORIGIN1, env.CORS_ORIGIN2, env.CORS_ORIGIN3],
     credentials: true
 }))
 
